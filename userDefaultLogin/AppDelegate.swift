@@ -10,11 +10,39 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    
+    var firstTime : String?
+ 
+    
+    
+    
+    
+    
 
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        
+        
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+       print(UserDefaults.standard.bool(forKey: "logged in")) //Bool)
+        
+        if (UserDefaults.standard.bool(forKey: "logged in") == false)
+        {
+            appDelegate.firstTime = String(0)
+        }
+        else
+        {
+            appDelegate.firstTime = String(1)
+        }
+        
+        
+        
         // Override point for customization after application launch.
         return true
     }
