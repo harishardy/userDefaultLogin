@@ -30,9 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
       let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
-       print(UserDefaults.standard.bool(forKey: "logged in")) //Bool)
+      // print(UserDefaults.standard.bool(forKey: "logged in")) //Bool)
         
-        if (UserDefaults.standard.bool(forKey: "logged in") == false)
+        if (UserDefaults.standard.bool(forKey: "logged in") == true)
         {
             appDelegate.firstTime = String(0)
         }
@@ -40,6 +40,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         {
             appDelegate.firstTime = String(1)
         }
+        
+        
+       
+        
+        
+//        if (appDelegate.firstTime == "0")
+//        {
+//            //self.view.backgroundColor = UIColor.red
+//            performSegue(withIdentifier: "goToGreen", sender: self)
+//        }
         
         
         

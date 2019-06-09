@@ -18,16 +18,24 @@ class ViewController: UIViewController {
         
         UserDefaults.standard.set(true,forKey: "logged in") //Bool
         
-       print(UserDefaults.standard.bool(forKey: "logged in")) //Bool)
+      // print(UserDefaults.standard.bool(forKey: "logged in")) //Bool)
         
         if (appDelegate.firstTime == "0")
         {
-            self.view.backgroundColor = UIColor.red
+            //self.view.backgroundColor = UIColor.red
+            //performSegue(withIdentifier: "goToGreen", sender: self)
+            
+            let home = self.storyboard?.instantiateViewController(withIdentifier: "greenViewController") as! greenViewController
+            self.navigationController?.pushViewController(home, animated: true)
+            
+            print("green")
+            
         }
         else
         {
-            self.view.backgroundColor = UIColor.green
+            print("red")
         }
+       
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
