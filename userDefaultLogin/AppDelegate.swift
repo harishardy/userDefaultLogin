@@ -11,13 +11,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-    
-    var firstTime : String?
- 
-    
-    
-    
-    
+
     
 
     var window: UIWindow?
@@ -26,30 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
+        UserDefaults.standard.bool(forKey: "logged in")
         
+      print(UserDefaults.standard.bool(forKey: "logged in")) //Bool)
         
-      let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        
-      // print(UserDefaults.standard.bool(forKey: "logged in")) //Bool)
-        
-        if (UserDefaults.standard.bool(forKey: "logged in") == true)
-        {
-            appDelegate.firstTime = String(0)
-        }
-        else
-        {
-            appDelegate.firstTime = String(1)
-        }
-        
-        
-       
-        
-        
-//        if (appDelegate.firstTime == "0")
-//        {
-//            //self.view.backgroundColor = UIColor.red
-//            performSegue(withIdentifier: "goToGreen", sender: self)
-//        }
+
         
         
         
